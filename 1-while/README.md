@@ -13,23 +13,41 @@ Before getting started, make sure that you have a JavaScript console open (like 
    ```js
    function sum(n) {
      // TODO: your code here
+     var total = 0
+     while (n > total)
+     total = (n * (n+1)) / 2;
+     return total
    }
-   sum(3); // => 6
-   sum(4); // => 10
-   sum(5); // => 15
+   console.log(sum(3)); // => 6
+   console.log(sum(4)); // => 10
+   console.log(sum(5)); // => 15
    ```
 
 2. **Factorial of `n`:** The factorial of `n` is the *product* of all the
    integers preceding `n`, starting with `1`, *e.g.*:
 
    ```js
+
    function factorial(n) {
      // TODO: your code here
+
+     let result = n
+     if (n===0|| n===0)
+       return 1
+
+     while (n > 1) {
+       n--
+       result *= n
+     }
+    return result
    }
-   factorial(3); // => 6
-   factorial(4); // => 24
-   factorial(5); // => 120
+   
+    console.log(factorial(3)); // => 6
+    console.log(factorial(4)); // => 24
+    console.log(factorial(5)); // => 120
    ```
+
+   <!-- ASK INSTRUCTOR IF THERE IS ANOTHER WAY TO USE THIS FORMULA WITHOUT USING THE 'IF' STATEMENT? -->
 
 3. **Repeating a String `n` Times:** Let's write a function called
    `repeatString` that takes two parameters: a string `str`, which is the string
@@ -39,11 +57,18 @@ Before getting started, make sure that you have a JavaScript console open (like 
    ```js
    function repeatString(str, count) {
      // TODO: your code here
+     let repeatStr = ''
+     while (count > 0){
+      repeatStr += str
+      count--
+     }
+
+    return repeatStr
    }
-   repeatString('dog', 0); // => ''
-   repeatString('dog', 1); // => 'dog'
-   repeatString('dog', 2); // => 'dogdog'
-   repeatString('dog', 3); // => 'dogdogdog'
+   console.log(repeatString('dog', 0)); // => ''
+   console.log(repeatString('dog', 1)); // => 'dog'
+   console.log(repeatString('dog', 2)); // => 'dogdog'
+   console.log(repeatString('dog', 3)); // => 'dogdogdog'
    ```
 
    Your task is to implement the `repeatString` function using a `while` loop.
